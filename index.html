@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Long Hoa Chung</title>
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -30,24 +29,25 @@
     </header>
 
     <!-- ===== ABOUT ===== -->
-    <section id="about">
+    <section id="about" style="background: url('images/forest.jpg') no-repeat center center/cover; color: white;">
         <h2>About Me</h2>
-        <p>I am a data scientist with a background in biomedical research. I specialize in leveraging data and AI to
-            solve complex problems and drive business insights. My journey from the lab to the boardroom has equipped me
-            with a unique perspective on how to apply scientific rigor to real-world challenges.</p>
+        <p>
+            I am a PhD-qualified scientist with 10+ years of biomedical research experience, now transitioning into
+            data science and AI. Skilled in Python, R, SQL, and machine learning, I bring strong analytical expertise
+            and a proven record of problem solving. My passion is applying data-driven insights to improve outcomes in
+            health, finance, and enterprise, while bridging science and business.
+        </p>
     </section>
 
     <!-- ===== SKILLS ===== -->
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Data Analysis & Visualization</li>
-            <li>Machine Learning & AI</li>
-            <li>Statistical Modeling</li>
-            <li>Programming (Python, R)</li>
-            <li>Data Wrangling & Cleaning</li>
-            <li>Business Intelligence</li>
-        </ul>
+        <div class="skills-grid">
+            <div><strong>Programming:</strong> Python, R, SQL</div>
+            <div><strong>Machine Learning:</strong> Predictive Modelling, NLP, Generative AI</div>
+            <div><strong>Visualization:</strong> Matplotlib, Seaborn, IBM Cognos, Power BI</div>
+        </div>
+        <img src="images/AI_1.jpg" alt="AI Concept" class="decorative-img">
     </section>
 
     <!-- ===== PROJECTS ===== -->
@@ -61,43 +61,51 @@
             <a href="https://github.com/longchung90/Loan_Default_Prediction" target="_blank">View on GitHub</a>
         </div>
 
-        <div class="project">
-            <h3>AI-Powered Customer Segmentation</h3>
-            <p>Developed a machine learning model to segment customers based on purchasing behavior, leading to a 15%
-                increase in targeted marketing effectiveness.</p>
+        <div class="project-card">
+            <img src="images/stackoverflow.png" alt="Stack Overflow Dashboard">
+            <h3>Stack Overflow Survey Storytelling</h3>
+            <p>Explored and visualized developer survey data using Python and IBM Cognos, building dashboards to
+                highlight trends.</p>
+            <a href="https://github.com/longchung90/Stack_Overflow_survey_story_telling" target="_blank">View on
+                GitHub</a>
         </div>
 
-        <div class="project">
-            <h3>Predictive Maintenance for Manufacturing Equipment</h3>
-            <p>Implemented predictive analytics to forecast equipment failures, reducing downtime by 20% and saving
-                costs on repairs.</p>
-        </div>
-
-        <div class="project">
-            <h3>Healthcare Data Analysis Platform</h3>
-            <p>Created a platform for analyzing patient data to identify trends and improve treatment outcomes,
-                enhancing patient care quality.</p>
+        <div class="project-card">
+            <img src="images/retail.png" alt="Online Retail Analysis">
+            <h3>Exploratory Analysis on Online Retail</h3>
+            <p>Conducted exploratory data analysis on online retail datasets to uncover insights on customer behavior
+                and sales performance.</p>
+            <a href="https://github.com/longchung90/Exploratory_Data_Analysis_on_retailing" target="_blank">View on
+                GitHub</a>
         </div>
     </section>
 
     <!-- ===== EXPERIENCE ===== -->
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-
+        <h2>Experience</h2>
         <div class="job">
-            <h3><i class="fas fa-flask"></i> Postdoctoral Scientist</h3>
+            <h3>Postdoctoral Scientist</h3>
             <p>Victor Chang Cardiac Research Institute (2019–2021)</p>
         </div>
+        <img src="images/bridge-9599215_1280.png" alt="Bridge" class="decorative-img">
+    </section>
 
-        <div class="job">
-            <h3>Data Scientist at Tech Solutions Inc.</h3>
-            <p><strong>Jan 2020 - Present</strong></p>
-            <ul>
-                <li>Lead data-driven projects to optimize business processes and improve decision-making.</li>
-                <li>Collaborate with cross-functional teams to implement AI solutions.</li>
-                <li>Conduct training sessions on data literacy and analytics tools.</li>
-            </ul>
-        </div>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:longhoa.chung90@gmail.com">longhoa.chung90@gmail.com</a></p>
+        <p>
+            <a href="https://linkedin.com/in/longchung90" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/longchung90" target="_blank">GitHub</a>
+        </p>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <!-- ===== FOOTER ===== -->

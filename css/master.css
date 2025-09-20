@@ -3,15 +3,13 @@
 
 :root {
     --primary: #2C3E50;
-    /* deep blue-gray */
     --secondary: #2980B9;
-    /* refined blue */
     --accent: #E67E22;
-    /* elegant orange-gold */
-    --bg-light: #FAFAFA;
+    --bg-light: #f0f8ff;
+    /* light blue */
     --bg-dark: #1C1C28;
-    --text-dark: #2D2D2D;
-    --text-light: #FFFFFF;
+    --text-dark: #333;
+    --text-light: #fff;
 }
 
 body {
@@ -27,7 +25,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--primary);
+    background: rgba(44, 62, 80, 0.9);
     color: var(--text-light);
     padding: 15px 40px;
     position: sticky;
@@ -64,12 +62,128 @@ nav a:hover {
 
 /* ===== Hero Section ===== */
 .hero {
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(41, 128, 185, 0.85)),
-        url("../images/moon_tree.jpg") no-repeat center center/cover;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../images/mooon_trees.jpg") no-repeat center center/cover;
     color: var(--text-light);
-    padding: 140px 20px;
+    padding: 160px 20px;
     text-align: center;
 }
 
 .hero h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto 25px;
+    opacity: 0.95;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #cf6d18;
+    transform: translateY(-2px);
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 70px 20px;
+    background: var(--bg-light);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--primary);
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* ===== Decorative Images in Sections ===== */
+.decorative-img {
+    max-width: 250px;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Contact Form ===== */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+#contact button {
+    padding: 12px;
+    background: var(--accent);
+    color: var(--text-light);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #cf6d18;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: url("../images/forest.jpg") no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
