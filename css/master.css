@@ -64,7 +64,8 @@ nav a:hover {
 
 /* ===== Hero Section ===== */
 .hero {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(41, 128, 185, 0.85)),
+        url("../images/moon_tree.jpg") no-repeat center center/cover;
     color: var(--text-light);
     padding: 140px 20px;
     text-align: center;
@@ -199,20 +200,7 @@ h2 {
 }
 
 #contact button:hover {
-    section {
-        padding: 70px 20px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: var(--text-light);
-    }
-
-    section:nth-child(even) {
-        background: var(--primary);
-    }
-
-    section:nth-child(odd) {
-        background: var(--secondary);
-    }
-
+    background: #cf6d18;
 }
 
 /* ===== Footer ===== */
@@ -223,8 +211,4 @@ footer {
     padding: 25px;
     margin-top: 40px;
     font-size: 0.9rem;
-}
-
-body {
-    background: pink !important;
 }
