@@ -1,18 +1,22 @@
 /* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
 :root {
-    --primary: #4A90E2;
-    --secondary: #9013FE;
-    --accent: #FF6B6B;
-    --bg-light: #f9f9f9;
-    --bg-dark: #1e1e2f;
-    --text-dark: #333;
-    --text-light: #fff;
+    --primary: #2C3E50;
+    /* deep blue-gray */
+    --secondary: #2980B9;
+    /* refined blue */
+    --accent: #E67E22;
+    /* elegant orange-gold */
+    --bg-light: #FAFAFA;
+    --bg-dark: #1C1C28;
+    --text-dark: #2D2D2D;
+    --text-light: #FFFFFF;
 }
 
-/* ===== Global Styles ===== */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
@@ -25,18 +29,22 @@ nav {
     align-items: center;
     background: var(--primary);
     color: var(--text-light);
-    padding: 15px 30px;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav h1 {
     margin: 0;
     font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -44,50 +52,57 @@ nav ul {
 nav a {
     color: var(--text-light);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
 }
 
 /* ===== Hero Section ===== */
 .hero {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: var(--text-light);
-    padding: 100px 20px;
+    padding: 140px 20px;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2rem;
     opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto 25px;
 }
 
 .hero .btn {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 15px;
+    padding: 12px 30px;
     background: var(--accent);
     color: var(--text-light);
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
 .hero .btn:hover {
-    background: #e85a5a;
+    background: #cf6d18;
+    transform: translateY(-2px);
 }
 
-/* ===== Section Styling ===== */
+/* ===== Sections ===== */
 section {
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 section:nth-child(even) {
@@ -98,22 +113,37 @@ section:nth-child(odd) {
     background: #fff;
 }
 
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
 /* ===== Skills Grid ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* ===== Project Cards ===== */
 .project-card {
     background: #fff;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 25px;
     margin: 20px auto;
     max-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img {
@@ -122,16 +152,54 @@ section:nth-child(odd) {
     margin-bottom: 15px;
 }
 
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+}
+
 .project-card a {
     display: inline-block;
-    margin-top: 10px;
-    color: var(--primary);
-    font-weight: bold;
+    margin-top: 12px;
+    color: var(--secondary);
+    font-weight: 600;
     text-decoration: none;
 }
 
 .project-card a:hover {
-    color: var(--secondary);
+    color: var(--accent);
+}
+
+/* ===== Contact Form ===== */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+#contact button {
+    padding: 12px;
+    background: var(--accent);
+    color: var(--text-light);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #cf6d18;
 }
 
 /* ===== Footer ===== */
@@ -139,6 +207,7 @@ footer {
     background: var(--bg-dark);
     color: var(--text-light);
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     margin-top: 40px;
+    font-size: 0.9rem;
 }
