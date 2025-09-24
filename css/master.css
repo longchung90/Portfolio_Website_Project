@@ -779,3 +779,52 @@ footer p {
     margin: 0;
     opacity: 0.9;
 }
+
+/* =======================
+   Experience Timeline
+======================= */
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.experience-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateX(10px);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.experience-item h3 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: left;
+    text-shadow: none;
+}
+
+.experience-role {
+    color: #f5f5f5;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .experience-item:hover {
+        transform: none;
+    }
+    
+    .experience-item h3 {
+        font-size: 1.2rem;
+    }
+}
