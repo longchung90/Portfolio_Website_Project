@@ -44,7 +44,7 @@ body {
     padding-top: 70px;
     /* push content below nav */
     font-family: 'Inter', sans-serif;
-    background: url("../images/sydney.jpg") no-repeat center bottom/cover;
+    background: url("../images/sydney_bridge.jpg") no-repeat center bottom/cover;
     background-attachment: fixed;
     /* parallax effect */
     color: var(--text-dark);
