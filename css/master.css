@@ -25,6 +25,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 nav a {
@@ -46,7 +47,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: url("../images/sydney.jpg") no-repeat center bottom/cover;
     background-attachment: fixed;
-    /* parallax effect */
+    /* parallax effect - Opera House background */
     color: var(--text-dark);
     line-height: 1.6;
 }
