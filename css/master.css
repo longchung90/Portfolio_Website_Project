@@ -762,3 +762,20 @@ section h3:hover {
     color: #ffa733;
     transition: color 0.3s ease;
 }
+
+/* =======================
+   Footer
+======================= */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.9;
+}
