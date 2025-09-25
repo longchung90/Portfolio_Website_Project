@@ -579,7 +579,7 @@
                 const response = await fetch('http://localhost:3000/api/contact', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, email, message })
+                    ß          body: JSON.stringify({ name, email, message })
                 });
                 if (response.ok) {
                     alert('Your message was sent!');
