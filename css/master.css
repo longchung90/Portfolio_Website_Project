@@ -841,7 +841,7 @@ footer p {
     .experience-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .experience-card:hover {
         transform: none;
     }
