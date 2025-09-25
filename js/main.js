@@ -104,3 +104,47 @@ window.onclick = function (event) {
         modal.style.display = 'none';
     }
 }
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+
+const app = express();
+const PORT = 3000;
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// POST endpoint for contact form
+app.post('/api/contact', async (req, res) => {
+    const { name, email, message } = req.body;
+    // Set up your email transporter (using Gmail example)
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'youremail@gmail.com',
+            pass: 'your-app-password-here'
+        }
+    });
+
+    const mailOptions = {
+        from: email,
+        to: 'youremail@gmail.com',
+        subject: `Portfolio Contact Form: Message from ${name}`,
+        text: `From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).send({ message: 'Message sent successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({ message: 'Failed to send message' });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
